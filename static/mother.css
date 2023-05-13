@@ -1,0 +1,10 @@
+.mother {
+  border-radius: 25%;
+  padding-top: 0%;
+  float: left;
+  width: 35%;
+  height: 50%;
+  max-width: 700px;
+  display: block;
+  margin: 0 auto;
+  }

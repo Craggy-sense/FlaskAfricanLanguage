@@ -1,0 +1,21 @@
+.flag-icon {
+    display: inline-block;
+    width: 24px;
+    height: 16px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+  }
+  .flag-icon-us {
+    background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/us.svg');
+  }
+  .flag-icon-gb {
+    background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/gb.svg');
+  }
+  .flag-icon-fr {
+    background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg');
+  }
+  .flag-icon-de {
+    background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/de.svg');
+  }

@@ -1,0 +1,38 @@
+<!-- templates/about.html -->
+<div class="container-fluid">
+    <style>
+    nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    nav li {
+        margin: 0 16px;
+    }
+    nav a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    </style>
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+    {% if session['language'] == 'sw' %}
+        <h1>Kuhusu Sisi</h1>
+        <p>Sisi ni kampuni ya kisasa.</p>
+    {% else %}
+        <h1>About Us</h1>
+        <p>We are a modern company.</p>
+    {% endif %}
+{% endblock %}
+</div>

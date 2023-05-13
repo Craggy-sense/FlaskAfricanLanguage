@@ -1,0 +1,52 @@
+<!-- templates/home.html -->
+<div class="container-fluid">
+    <style>
+    nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    nav li {
+        margin: 0 16px;
+    }
+    nav a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    </style>
+
+ 
+      
+
+<!-- templates/home.html -->
+<style>
+    #welcome {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+</style>
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    {% if session['language'] == 'sw' %}
+        <h1 id="welcome">Karibu!</h1>
+        <p id="welcome">Hapa ni ukurasa wa nyumbani.</p>
+    {% else %}
+        <p id="welcome">Suitable for both locals and foreigners.</p>
+    {% endif %}
+{% endblock %}
+
+   
+</div>

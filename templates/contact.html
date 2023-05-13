@@ -1,0 +1,53 @@
+<!-- templates/contact.html -->
+<div class="container-fluid">
+    <style>
+    nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    nav li {
+        margin: 0 16px;
+    }
+    nav a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    </style>
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+{% if session['language'] == 'sw' %}
+<h1>Wasiliana nasi</h1>
+<p>Jaza fomu hapa chini ili uwasiliane nasi</p>
+{% else %}
+<h1>Contact Us</h1>
+<p>Fill out the form below to get in touch with us</p>
+{% endif %}
+<form action="{{ url_for('contact') }}" method="POST">
+<div>
+<label for="name">{{ 'Name' if session['language'] == 'en' else 'Jina' }}:</label>
+<input type="text" id="name" name="name" required>
+</div>
+<div>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+</div>
+<div>
+<label for="message">{{ 'Message' if session['language'] == 'en' else 'Ujumbe' }}:</label>
+<textarea id="message" name="message" required></textarea>
+</div>
+<button type="submit">{{ 'Submit' if session['language'] == 'en' else 'Tuma' }}</button>
+</form>
+{% endblock %}
+</div>

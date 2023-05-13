@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mama Lingo</title>
+    {% include 'bootstrap.html' %}
+    <style>
+        body {
+            background-color: #FFA500; ;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="Logo" class="logo">
+    <link rel="stylesheet" href="{{ url_for('static', filename='logo.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+            <div class="language-select">
+                <form action="{{ url_for('set_language') }}" method="POST">
+                    <select name="language" onchange="this.form.submit()">
+                        <option value="en" {% if session.get('language') == 'en' %}selected{% endif %}>English</option>
+                        <option value="sw" {% if session.get('language') == 'sw' %}selected{% endif %}>Swahili</option>
+                    </select>
+                    <noscript><input type="submit" value="Submit"></noscript>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1 class="text-center mt-2 mb-4">Mama Lingo</h1>
+            <div class="row" style="margin-bottom: 16px;">
+                <div class="col-md-6"></div>
+            </div>
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+    <style>
+        #greeting {
+            text-align: right;
+            position: absolute;
+            top: 35%;
+            right: 23%;
+            transform: translateY(-50%);
+        }
+    </style>
+    <p id="greeting">Jambo</p>
+
+    <div class="container-fluid">
+        <style>
+            .left-align {
+                text-align: right;
+            }
+        </style>
+        <form class="left-align" action="Welcome" method="post">
+            <p class="lead">
+               Welcome to Mama lingo free effective platform to learn your mother tongue!
+            </p>
+            <img src="{{ url_for('static', filename='img/kenya.jpg') }}" alt="Kenya" class="kenya">
+            <link rel="stylesheet" href="{{ url_for('static', filename='kenya.css') }}">
+        </form>
+    </div>
+    <img src="{{ url_for('static', filename='img/mother.jpg') }}" alt="mother" class="mother">
+    <link rel="stylesheet" href="{{ url_for('static', filename='mother.css') }}">
+    <style>
+        #container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        
+        #ready {
+          margin-bottom: 0;
+        }
+        
+        #click {
+          margin-top: 0;
+        }
+      </style>
+      
+      <div id="container">
+        <h1 id="ready">Are you ready</h1>
+        <button id="click">Click me!</button>
+      </div>
+      
+
+
+   
+</body>
+</html> 
+{% include 'login.html' %}
+{% include 'flags.html' %}
+{% include 'flag_result.html' %}
