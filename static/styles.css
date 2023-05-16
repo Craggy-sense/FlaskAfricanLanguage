@@ -1,0 +1,122 @@
+/* common styles for all pages */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* styles for the header */
+  .header {
+    background-color: #008CBA;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* styles for the navigation menu */
+  .nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .nav li {
+    float: left;
+  }
+  
+  .nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .nav li a:hover {
+    background-color: #111;
+  }
+  
+  /* styles for the footer */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* styles for the get_started page */
+  .get-started {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  /* styles for the language selection form */
+  .language-form {
+    margin-top: 50px;
+  }
+  
+  .language-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .language-form select {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .language-form input[type="submit"] {
+    background-color: #008CBA;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* styles for the quiz questions */
+  .quiz {
+    margin-top: 50px;
+  }
+  
+  .quiz-question {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .quiz-options {
+    margin-bottom: 20px;
+  }
+  
+  .quiz-options label {
+    display: block;
+  }
+  
+  .quiz-options input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .quiz-submit {
+    text-align: center;
+  }
+  
+  .quiz-submit input[type="submit"] {
+    background-color: #008CBA;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  

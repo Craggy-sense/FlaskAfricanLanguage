@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mama Lingo</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+
+		.header {
+			background-color: #F7DFC4;
+			text-align: center;
+			padding: 50px;
+		}
+
+		.header h1 {
+			margin: 0;
+			font-size: 48px;
+			color: #333;
+		}
+
+		.content {
+			background-color: #FFF8E1;
+			padding: 50px;
+		}
+
+		.content img {
+			float: left;
+			margin-right: 20px;
+			width: 50%;
+			height: auto;
+		}
+
+		.content h2 {
+			margin-top: 0;
+			font-size: 36px;
+			color: #333;
+		}
+
+		.map {
+			width: 100px; /* set the width to 100 pixels */
+            height: auto;
+		}
+
+		.btn {
+			display: block;
+			margin-top: 50px;
+			margin-bottom: 50px;
+			padding: 20px 50px;
+			background-color: #333;
+			color: #FFF;
+			font-size: 24px;
+			text-align: center;
+			text-decoration: none;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px #666;
+			transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+		}
+
+		.btn:hover {
+			background-color: #444;
+			box-shadow: 0px 0px 20px #666;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1>Mama Lingo</h1>
+	</div>
+	<div class="content">
+		<img src="{{ url_for('static', filename='images/mother.jpg') }}" alt="African mother and child">
+		<h2>Welcome to Mama Lingo</h2>
+		<p>Learn your mother tongue language and connect with your heritage. Mama Lingo is a platform that helps you learn and practice your native language.</p>
+		<div class="map">
+			<img id="mother" src="{{ url_for('static', filename='images/kenya.jpeg') }}" alt="Map of Kenya">
+		</div>
+		<a href="{{ url_for('get_started') }}" class="btn">Get Started</a>
+	</div>
+</body>
+</html>

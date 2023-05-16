@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learn Language</title>
+</head>
+<body>
+    <h1>{{ language }} Vocabulary</h1>
+    <table>
+        <tr>
+            <th>Word</th>
+            <th>Translation</th>
+        </tr>
+        {% for word, translation in vocabulary.items() %}
+        <tr>
+            <td>{{ word }}</td>
+            <td>{{ translation }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <hr>
+    <h1>Quiz</h1>
+    {% if not quiz_complete %}
+    <form action="{{ url_for('submit_answer') }}" method="POST">
+        {% for question in quiz %}
+        <p>{{ question['question'] }}</p>
+        {% for option in question['options'] %}
+        <input type="radio" id="{{ option }}" name="{{ question['question'] }}" value="{{ option }}">
+        <label for="{{ option }}">{{ option }}</label><br>
+        {% endfor %}
+        <br>
+        {% endfor %}
+        <input type="submit" value="Submit">
+    </form>
+    {% else %}
+    <p>Congratulations! You completed the quiz!</p>
+    {% endif %}
+</body>
+</html>
+
