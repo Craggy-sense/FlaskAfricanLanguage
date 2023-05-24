@@ -49,12 +49,12 @@
 			margin-top: 50px;
 			margin-bottom: 50px;
 			padding: 20px 50px;
-			background-color: #333;
+			background-color: #ab541ed9;
 			color: #FFF;
-			font-size: 24px;
+			font-size: 20px;
 			text-align: center;
 			text-decoration: none;
-			border-radius: 10px;
+			border-radius: 50px;
 			box-shadow: 0px 0px 10px #666;
 			transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 		}
@@ -63,20 +63,25 @@
 			background-color: #444;
 			box-shadow: 0px 0px 20px #666;
 		}
+		.btn{width: 50%;}
 	</style>
 </head>
 <body>
 	<div class="header">
-		<h1>Mama Lingo</h1>
+		<h1 style="text-align: left;">Mama Lingo</h1>
 	</div>
 	<div class="content">
 		<img src="{{ url_for('static', filename='images/mother.jpg') }}" alt="African mother and child">
-		<h2>Welcome to Mama Lingo</h2>
-		<p>Learn your mother tongue language and connect with your heritage. Mama Lingo is a platform that helps you learn and practice your native language.</p>
+		<h2 style="font-size:160%;font-family: noto sans black;">Jambo!Welcome to Mama Lingo</h2>
+		<p style="font-family: 'Trebuchet MS', sans-serif;">The fun, free and effective app for learning your mother tongue.</p>
+		<p style="font-family: 'Trebuchet MS', sans-serif;">Learn your mother tongue language and connect with your heritage.<br> Mama Lingo is a platform that helps you learn and practice your native language.</p>
 		<div class="map">
-			<img id="mother" src="{{ url_for('static', filename='images/kenya.jpeg') }}" alt="Map of Kenya">
+			<img id="mother" src="{{url_for('static', filename='images/kenya.jpeg') }}"  alt="Map of Kenya">
+
 		</div>
-		<a href="{{ url_for('get_started') }}" class="btn">Get Started</a>
+		<b>Are you ready?</b>
+	
+		<a href="{{ url_for('get_started') }}" class="btn">Let's get Started</a>
 	</div>
 </body>
 </html>
